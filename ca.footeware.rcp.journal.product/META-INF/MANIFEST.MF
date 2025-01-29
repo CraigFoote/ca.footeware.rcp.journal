@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Journal Product
+Bundle-SymbolicName: ca.footeware.rcp.journal.product;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.equinox.app
+Bundle-Vendor: Footeware.ca
+Automatic-Module-Name: ca.footeware.rcp.journal.product
+Bundle-RequiredExecutionEnvironment: JavaSE-23

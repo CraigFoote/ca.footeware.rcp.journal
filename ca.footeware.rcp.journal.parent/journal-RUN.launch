@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.pde.ui.RuntimeWorkbench">
+    <setAttribute key="additional_plugins">
+        <setEntry value="org.apache.felix.scr:2.2.12:default:true:2:true"/>
+        <setEntry value="org.eclipse.core.runtime:3.32.100.v20241128-0455:default:true:default:true"/>
+        <setEntry value="org.eclipse.equinox.common:3.19.200.v20241004-0654:default:true:2:true"/>
+        <setEntry value="org.eclipse.equinox.event:1.7.100.v20240321-1445:default:true:2:true"/>
+        <setEntry value="org.eclipse.equinox.simpleconfigurator:1.5.300.v20240424-1301:default:true:1:true"/>
+    </setAttribute>
+    <booleanAttribute key="append.args" value="true"/>
+    <stringAttribute key="application" value="org.eclipse.e4.ui.workbench.swt.E4Application"/>
+    <booleanAttribute key="askclear" value="true"/>
+    <booleanAttribute key="automaticAdd" value="false"/>
+    <booleanAttribute key="automaticIncludeRequirements" value="true"/>
+    <booleanAttribute key="automaticValidate" value="true"/>
+    <stringAttribute key="bootstrap" value=""/>
+    <stringAttribute key="checked" value="[NONE]"/>
+    <booleanAttribute key="clearConfig" value="true"/>
+    <booleanAttribute key="clearws" value="false"/>
+    <booleanAttribute key="clearwslog" value="false"/>
+    <stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/journal-RUN"/>
+    <booleanAttribute key="default" value="true"/>
+    <stringAttribute key="featureDefaultLocation" value="workspace"/>
+    <stringAttribute key="featurePluginResolution" value="workspace"/>
+    <booleanAttribute key="includeOptional" value="false"/>
+    <stringAttribute key="location" value="${workspace_loc}/../runtime-ca.footeware.rcp.journal.product"/>
+    <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_SHOW_CODEDETAILS_IN_EXCEPTION_MESSAGES" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-23"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -clearPersistedState"/>
+    <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=true"/>
+    <stringAttribute key="pde.version" value="3.3"/>
+    <stringAttribute key="product" value="ca.footeware.rcp.journal.product"/>
+    <stringAttribute key="productFile" value="/ca.footeware.rcp.journal.ui/ca.footeware.rcp.journal.product"/>
+    <stringAttribute key="productId" value="ca.footeware.rcp.journal.product"/>
+    <stringAttribute key="productName" value="ca.footeware.rcp.journal"/>
+    <stringAttribute key="productVersion" value="1.0.0.qualifier"/>
+    <setAttribute key="root_features">
+        <setEntry value="ca.footeware.rcp.journal.feature"/>
+        <setEntry value="org.eclipse.emf.common"/>
+        <setEntry value="org.eclipse.emf.ecore"/>
+        <setEntry value="org.eclipse.nebula.widgets.datechooser.feature"/>
+        <setEntry value="org.eclipse.nebula.widgets.formattedtext.feature"/>
+        <setEntry value="org.eclipse.nebula.widgets.passwordrevealer.feature"/>
+        <setEntry value="org.eclipse.rcp"/>
+    </setAttribute>
+    <setAttribute key="selected_features">
+        <setEntry value="ca.footeware.rcp.journal.feature:default"/>
+        <setEntry value="org.eclipse.e4.rcp:default"/>
+        <setEntry value="org.eclipse.emf.common:default"/>
+        <setEntry value="org.eclipse.emf.ecore:default"/>
+        <setEntry value="org.eclipse.nebula.widgets.datechooser.feature:default"/>
+        <setEntry value="org.eclipse.nebula.widgets.formattedtext.feature:default"/>
+        <setEntry value="org.eclipse.nebula.widgets.passwordrevealer.feature:default"/>
+    </setAttribute>
+    <setAttribute key="selected_target_bundles">
+        <setEntry value="org.apache.felix.gogo.command@default:default"/>
+        <setEntry value="org.apache.felix.gogo.runtime@default:default"/>
+        <setEntry value="org.apache.felix.gogo.shell@default:default"/>
+        <setEntry value="org.apache.felix.scr@2:true"/>
+        <setEntry value="org.eclipse.core.commands@default:default"/>
+        <setEntry value="org.eclipse.core.contenttype@default:default"/>
+        <setEntry value="org.eclipse.core.databinding.beans@default:default"/>
+        <setEntry value="org.eclipse.core.databinding.observable@default:default"/>
+        <setEntry value="org.eclipse.core.databinding.property@default:default"/>
+        <setEntry value="org.eclipse.core.databinding@default:default"/>
+        <setEntry value="org.eclipse.core.expressions@default:default"/>
+        <setEntry value="org.eclipse.core.jobs@default:default"/>
+        <setEntry value="org.eclipse.core.runtime@default:true"/>
+        <setEntry value="org.eclipse.e4.core.commands@default:default"/>
+        <setEntry value="org.eclipse.e4.core.contexts@default:default"/>
+        <setEntry value="org.eclipse.e4.core.di.annotations@default:default"/>
+        <setEntry value="org.eclipse.e4.core.di.extensions.supplier@default:default"/>
+        <setEntry value="org.eclipse.e4.core.di.extensions@default:default"/>
+        <setEntry value="org.eclipse.e4.core.di@default:default"/>
+        <setEntry value="org.eclipse.e4.core.services@default:default"/>
+        <setEntry value="org.eclipse.e4.emf.xpath@default:default"/>
+        <setEntry value="org.eclipse.e4.ui.bindings@default:default"/>
+        <setEntry value="org.eclipse.e4.ui.css.core@default:default"/>
+        <setEntry value="org.eclipse.e4.ui.css.swt.theme@default:default"/>
+        <setEntry value="org.eclipse.e4.ui.css.swt@default:default"/>
+        <setEntry value="org.eclipse.e4.ui.di@default:default"/>
+        <setEntry value="org.eclipse.e4.ui.dialogs@default:default"/>
+        <setEntry value="org.eclipse.e4.ui.model.workbench@default:default"/>
+        <setEntry value="org.eclipse.e4.ui.progress@default:default"/>
+        <setEntry value="org.eclipse.e4.ui.services@default:default"/>
+        <setEntry value="org.eclipse.e4.ui.swt.gtk@default:default"/>
+        <setEntry value="org.eclipse.e4.ui.widgets@default:default"/>
+        <setEntry value="org.eclipse.e4.ui.workbench.addons.swt@default:default"/>
+        <setEntry value="org.eclipse.e4.ui.workbench.renderers.swt@default:default"/>
+        <setEntry value="org.eclipse.e4.ui.workbench.swt@default:default"/>
+        <setEntry value="org.eclipse.e4.ui.workbench3@default:default"/>
+        <setEntry value="org.eclipse.e4.ui.workbench@default:default"/>
+        <setEntry value="org.eclipse.emf.common@default:default"/>
+        <setEntry value="org.eclipse.emf.ecore.change@default:default"/>
+        <setEntry value="org.eclipse.emf.ecore.xmi@default:default"/>
+        <setEntry value="org.eclipse.emf.ecore@default:default"/>
+        <setEntry value="org.eclipse.equinox.app@default:default"/>
+        <setEntry value="org.eclipse.equinox.bidi@default:default"/>
+        <setEntry value="org.eclipse.equinox.common@2:true"/>
+        <setEntry value="org.eclipse.equinox.console@default:default"/>
+        <setEntry value="org.eclipse.equinox.event@2:true"/>
+        <setEntry value="org.eclipse.equinox.launcher.gtk.linux.x86_64@default:default"/>
+        <setEntry value="org.eclipse.equinox.launcher@default:default"/>
+        <setEntry value="org.eclipse.equinox.preferences@default:default"/>
+        <setEntry value="org.eclipse.equinox.registry@default:default"/>
+        <setEntry value="org.eclipse.equinox.simpleconfigurator@1:true"/>
+        <setEntry value="org.eclipse.jface.databinding@default:default"/>
+        <setEntry value="org.eclipse.jface.notifications@default:default"/>
+        <setEntry value="org.eclipse.jface@default:default"/>
+        <setEntry value="org.eclipse.nebula.widgets.datechooser.source@default:default"/>
+        <setEntry value="org.eclipse.nebula.widgets.datechooser@default:default"/>
+        <setEntry value="org.eclipse.nebula.widgets.formattedtext.source@default:default"/>
+        <setEntry value="org.eclipse.nebula.widgets.formattedtext@default:default"/>
+        <setEntry value="org.eclipse.nebula.widgets.passwordrevealer.source@default:default"/>
+        <setEntry value="org.eclipse.nebula.widgets.passwordrevealer@default:default"/>
+        <setEntry value="org.eclipse.osgi.compatibility.state@default:default"/>
+        <setEntry value="org.eclipse.osgi.util@default:default"/>
+        <setEntry value="org.eclipse.osgi@default:default"/>
+        <setEntry value="org.eclipse.swt.gtk.linux.x86_64@default:default"/>
+        <setEntry value="org.eclipse.swt@default:default"/>
+        <setEntry value="org.eclipse.urischeme@default:default"/>
+        <setEntry value="org.osgi.service.cm@default:default"/>
+        <setEntry value="org.osgi.service.component@default:default"/>
+        <setEntry value="org.osgi.service.device@default:default"/>
+        <setEntry value="org.osgi.service.event@default:default"/>
+        <setEntry value="org.osgi.service.metatype@default:default"/>
+        <setEntry value="org.osgi.service.prefs@default:default"/>
+        <setEntry value="org.osgi.service.provisioning@default:default"/>
+        <setEntry value="org.osgi.service.upnp@default:default"/>
+        <setEntry value="org.osgi.service.useradmin@default:default"/>
+        <setEntry value="org.osgi.service.wireadmin@default:default"/>
+        <setEntry value="org.osgi.util.function@default:default"/>
+        <setEntry value="org.osgi.util.measurement@default:default"/>
+        <setEntry value="org.osgi.util.position@default:default"/>
+        <setEntry value="org.osgi.util.promise@default:default"/>
+        <setEntry value="org.osgi.util.xml@default:default"/>
+    </setAttribute>
+    <setAttribute key="selected_workspace_bundles">
+        <setEntry value="ca.footeware.rcp.journal.ui@default:default"/>
+    </setAttribute>
+    <booleanAttribute key="show_selected_only" value="false"/>
+    <booleanAttribute key="tracing" value="false"/>
+    <booleanAttribute key="useCustomFeatures" value="false"/>
+    <booleanAttribute key="useDefaultConfig" value="true"/>
+    <booleanAttribute key="useDefaultConfigArea" value="true"/>
+    <booleanAttribute key="useProduct" value="true"/>
+</launchConfiguration>

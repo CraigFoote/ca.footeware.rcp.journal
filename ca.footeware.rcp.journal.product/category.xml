@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+	<feature id="ca.footeware.rcp.journal.feature">
+		<category name="ca.footeware.rcp.journal" />
+	</feature>
+	<category-def name="ca.footeware.rcp.journal"
+		label="Journal" />
+</site>
