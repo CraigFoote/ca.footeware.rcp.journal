@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.eclipse.jface.layout.GridDataFactory;
+import org.eclipse.jface.layout.GridLayoutFactory;
 import org.eclipse.nebula.widgets.datechooser.DateChooser;
 import org.eclipse.nebula.widgets.datechooser.DateChooserTheme;
 import org.eclipse.nebula.widgets.passwordrevealer.PasswordRevealer;
@@ -41,6 +42,7 @@ public class JournalPart {
 	private String password;
 	private Shell shell;
 	private DateChooserTheme theme;
+	private Date currentDate;
 
 	@PostConstruct
 	public void createComposite(Composite parent) {
@@ -55,9 +57,14 @@ public class JournalPart {
 		createOpenTab(tabFolder);
 		createNewTab(tabFolder);
 
-		// calendar
-		dateChooser = new DateChooser(parent, SWT.SIMPLE);
-		GridDataFactory.swtDefaults().align(SWT.FILL, SWT.FILL).applyTo(dateChooser);
+		// calendar and buttons container
+		Composite dateChooserComposite = new Composite(parent, SWT.BORDER);
+		GridDataFactory.swtDefaults().align(SWT.FILL, SWT.FILL).applyTo(dateChooserComposite);
+		GridLayoutFactory.swtDefaults().numColumns(4).equalWidth(false).applyTo(dateChooserComposite);
+
+		// DateChooser
+		dateChooser = new DateChooser(dateChooserComposite, SWT.SIMPLE);
+		GridDataFactory.swtDefaults().align(SWT.FILL, SWT.FILL).span(4, 1).applyTo(dateChooser);
 		dateChooser.setForeground(Display.getDefault().getSystemColor(SWT.COLOR_BLACK));
 		dateChooser.setBackground(Display.getDefault().getSystemColor(SWT.COLOR_GRAY));
 		dateChooser.setAutoSelectOnFooter(true);
@@ -68,11 +75,11 @@ public class JournalPart {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				if (journal != null) {
-					Date selectedDate = dateChooser.getSelectedDate();
+					currentDate = dateChooser.getSelectedDate();
 					// find entry for date, if any, and display its contentText
 					String decrypted = "";
 					try {
-						decrypted = journal.decrypt(selectedDate);
+						decrypted = journal.decrypt(currentDate);
 					} catch (JournalException | IllegalArgumentException e1) {
 						showError("An error occurred.\n" + e1.getMessage());
 					}
@@ -81,7 +88,87 @@ public class JournalPart {
 			}
 		});
 
-		// content
+		// 'first' button
+		Button firstButton = new Button(dateChooserComposite, SWT.PUSH);
+		firstButton.setText("First");
+		GridDataFactory.swtDefaults().align(SWT.FILL, SWT.FILL).grab(true, false).applyTo(firstButton);
+		firstButton.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				if (journal != null) {
+					try {
+						currentDate = journal.getFirstDate();
+						dateChooser.setSelectedDate(currentDate);
+						String decrypted = journal.decrypt(currentDate);
+						contentText.setText(decrypted);
+					} catch (ParseException | JournalException e1) {
+						showError("An error occurred.\n" + e1.getMessage());
+					}
+				}
+			}
+		});
+
+		// 'previous' button
+		Button previousButton = new Button(dateChooserComposite, SWT.PUSH);
+		previousButton.setText("Previous");
+		GridDataFactory.swtDefaults().align(SWT.FILL, SWT.FILL).grab(true, false).applyTo(previousButton);
+		previousButton.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				if (journal != null) {
+					try {
+						currentDate = journal.getPreviousDate(currentDate);
+						dateChooser.setSelectedDate(currentDate);
+						String decrypted = journal.decrypt(currentDate);
+						contentText.setText(decrypted);
+					} catch (ParseException | JournalException e1) {
+						showError("An error occurred.\n" + e1.getMessage());
+					}
+				}
+			}
+		});
+
+		// 'next' button
+		Button nextButton = new Button(dateChooserComposite, SWT.PUSH);
+		nextButton.setText("Next");
+		GridDataFactory.swtDefaults().align(SWT.FILL, SWT.FILL).grab(true, false).applyTo(nextButton);
+		nextButton.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				if (journal != null) {
+					try {
+						currentDate = journal.getNextDate(currentDate);
+						dateChooser.setSelectedDate(currentDate);
+						String decrypted = journal.decrypt(currentDate);
+						contentText.setText(decrypted);
+					} catch (ParseException | JournalException e1) {
+						showError("An error occurred.\n" + e1.getMessage());
+					}
+				}
+			}
+		});
+
+		// 'last' button
+		Button lastButton = new Button(dateChooserComposite, SWT.PUSH);
+		lastButton.setText("Last");
+		GridDataFactory.swtDefaults().align(SWT.FILL, SWT.FILL).grab(true, false).applyTo(lastButton);
+		lastButton.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				if (journal != null) {
+					try {
+						currentDate = journal.getLastDate();
+						dateChooser.setSelectedDate(currentDate);
+						String decrypted = journal.decrypt(currentDate);
+						contentText.setText(decrypted);
+					} catch (ParseException | JournalException e1) {
+						showError("An error occurred.\n" + e1.getMessage());
+					}
+				}
+			}
+		});
+
+		// content text
 		contentText = new Text(parent, SWT.BORDER | SWT.MULTI | SWT.WRAP);
 		GridDataFactory.swtDefaults().align(SWT.FILL, SWT.FILL).grab(true, true).span(2, 1).applyTo(contentText);
 		contentText.addModifyListener(_ -> {

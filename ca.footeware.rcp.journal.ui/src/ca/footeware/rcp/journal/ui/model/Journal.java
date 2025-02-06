@@ -12,6 +12,7 @@ import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.List;
@@ -84,6 +85,7 @@ public class Journal {
 				dates.add(date);
 			}
 		}
+		Collections.sort(dates);
 		return dates;
 	}
 
@@ -95,5 +97,27 @@ public class Journal {
 		try (final var out = new OutputStreamWriter(new FileOutputStream(file), StandardCharsets.UTF_8)) {
 			properties.store(out, null);
 		}
+	}
+
+	public Date getFirstDate() throws ParseException {
+		List<Date> dates = getDates();
+		return dates.getFirst();
+	}
+
+	public Date getPreviousDate(Date currentDate) throws ParseException {
+		List<Date> dates = getDates();
+		int index = dates.indexOf(currentDate);
+		return dates.get((index - 1 < 0) ? 0 : index - 1);
+	}
+
+	public Date getNextDate(Date currentDate) throws ParseException {
+		List<Date> dates = getDates();
+		int index = dates.indexOf(currentDate);
+		return dates.get((index + 1 == dates.size()) ? index : index + 1);
+	}
+
+	public Date getLastDate() throws ParseException {
+		List<Date> dates = getDates();
+		return dates.getLast();
 	}
 }
