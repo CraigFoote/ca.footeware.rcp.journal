@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Journal UI
 Bundle-SymbolicName: ca.footeware.rcp.journal.ui;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 1.1.0.qualifier
 Export-Package: ca.footeware.rcp.journal.ui.exceptions,
  ca.footeware.rcp.journal.ui.model,
  ca.footeware.rcp.journal.ui.parts

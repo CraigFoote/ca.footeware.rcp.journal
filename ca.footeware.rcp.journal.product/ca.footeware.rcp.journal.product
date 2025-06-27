@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="ca.footeware.rcp.journal" uid="ca.footeware.rcp.journal.product" id="ca.footeware.rcp.journal.product" application="org.eclipse.e4.ui.workbench.swt.E4Application" version="1.0.0.qualifier" type="features" includeLaunchers="true" includeJRE="true" autoIncludeRequirements="true">
+<product name="ca.footeware.rcp.journal" uid="ca.footeware.rcp.journal.product" id="ca.footeware.rcp.journal.product" application="org.eclipse.e4.ui.workbench.swt.E4Application" version="1.1.0.qualifier" type="features" includeLaunchers="true" includeJRE="true" autoIncludeRequirements="true">
 
    <configIni use="default">
    </configIni>

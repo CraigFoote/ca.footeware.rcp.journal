@@ -36,7 +36,7 @@
     <stringAttribute key="productFile" value="/ca.footeware.rcp.journal.ui/ca.footeware.rcp.journal.product"/>
     <stringAttribute key="productId" value="ca.footeware.rcp.journal.product"/>
     <stringAttribute key="productName" value="ca.footeware.rcp.journal"/>
-    <stringAttribute key="productVersion" value="1.0.0.qualifier"/>
+    <stringAttribute key="productVersion" value="1.1.0.qualifier"/>
     <setAttribute key="root_features">
         <setEntry value="ca.footeware.rcp.journal.feature"/>
         <setEntry value="org.eclipse.emf.common"/>
